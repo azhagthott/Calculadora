@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "816326877764",
+    "firebase_url": "https://calculadora-pokemon.firebaseio.com",
+    "project_id": "calculadora-pokemon",
+    "storage_bucket": "calculadora-pokemon.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:816326877764:android:4ed0c61c333fe42c",
+        "android_client_info": {
+          "package_name": "com.fran.android.tranosocalculator"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "816326877764-l1ftl249u6oe3nopal1rdtpm9civ3v2e.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.fran.android.tranosocalculator",
+            "certificate_hash": "AFFCC2A6842E8F684E598A3ACA0B6DECFFA52632"
+          }
+        },
+        {
+          "client_id": "816326877764-vh2dt2ihfmolqdhi21j3q68mgtpokg95.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4pvlBvtcO5ryZtOR_mDu9H51KnTC8u5E"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "816326877764-vh2dt2ihfmolqdhi21j3q68mgtpokg95.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

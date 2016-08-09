@@ -1,0 +1,65 @@
+<resources>
+    <string name="app_name">TranosoCalculator</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- UI Main -->
+
+    <string name="id">ID: </string>
+    <string name="name">Name: </string>
+    <string name="type_1">Type 1: </string>
+    <string name="type_2">Type 2: </string>
+
+    <string name="quick_move_1">Quick Move 1: </string>
+    <string name="quick_move_2">Quick Move 2: </string>
+
+    <string name="special_move_1">Special Move 1: </string>
+    <string name="special_move_2">Special Move 2: </string>
+    <string name="special_move_3">Special Move 3: </string>
+    <string name="special_move_4">Special Move 4: </string>
+
+    <string name="moveset">MoveSet</string>
+    <string name="quick1">Quick 1</string>
+    <string name="quick2">Quick 2</string>
+
+    <string name="moveset_quick1_special_move_1">Special Move 1: </string>
+    <string name="moveset_quick1_special_move_2">Special Move 2: </string>
+    <string name="moveset_quick1_special_move_3">Special Move 3: </string>
+    <string name="moveset_quick1_special_move_4">Special Move 4: </string>
+
+    <string name="moveset_quick2_special_move_1">Special Move 1: </string>
+    <string name="moveset_quick2_special_move_2">Special Move 2: </string>
+    <string name="moveset_quick2_special_move_3">Special Move 3: </string>
+    <string name="moveset_quick2_special_move_4">Special Move 4: </string>
+
+    <string name="total_power_p">Total Power %</string>
+    <string name="total_power_p_quick1_special_move_1">Special Move 1: </string>
+    <string name="total_power_p_quick1_special_move_2">Special Move 2: </string>
+    <string name="total_power_p_quick1_special_move_3">Special Move 3: </string>
+    <string name="total_power_p_quick1_special_move_4">Special Move 4: </string>
+
+    <string name="total_power_p_quick2_max">Total Power % Max</string>
+    <string name="total_power_p_quick2_special_move_1">Special Move 1: </string>
+    <string name="total_power_p_quick2_special_move_2">Special Move 2: </string>
+    <string name="total_power_p_quick2_special_move_3">Special Move 3: </string>
+    <string name="total_power_p_quick2_special_move_4">Special Move 4: </string>
+
+
+    <string name="total_power">Total Power</string>
+    <string name="total_power_quick1_special_move_1">Special Move 1: </string>
+    <string name="total_power_quick1_special_move_2">Special Move 2: </string>
+    <string name="total_power_quick1_special_move_3">Special Move 3: </string>
+    <string name="total_power_quick1_special_move_4">Special Move 4: </string>
+
+    <string name="total_power_quick2_max">Total Power Max</string>
+    <string name="total_power_quick2_special_move_1">Special Move 1: </string>
+    <string name="total_power_quick2_special_move_2">Special Move 2: </string>
+    <string name="total_power_quick2_special_move_3">Special Move 3: </string>
+    <string name="total_power_quick2_special_move_4">Special Move 4: </string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_tab">TabActivity</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+
+
+</resources>
