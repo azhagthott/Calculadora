@@ -1,5 +1,6 @@
 package com.fran.android.tranosocalculator.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -22,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
 
     private ViewPager mPager;
     private PagerAdapter mPagerAdapter;
+
+    private String pokemonName;
 
     private static final int NUM_PAGES = 4;
 
@@ -59,40 +62,69 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
-
         if (id == R.id.action_settings) {
+            startActivity(new Intent(MainActivity.this, SettingsActivity.class));
             return true;
         }
-
         return super.onOptionsItemSelected(item);
     }
 
     private class ScreenSlidePagerAdapter extends FragmentStatePagerAdapter {
+
+        private String tabTitles[] = new String[]{
+                getResources().getString(R.string.tab_main_data),
+                getResources().getString(R.string.moveset),
+                getResources().getString(R.string.tab_total_power),
+                getResources().getString(R.string.tab_total_power_p)
+        };
+
+        private Bundle arg1;
+
         public ScreenSlidePagerAdapter(FragmentManager fm) {
             super(fm);
         }
 
         @Override
+        public CharSequence getPageTitle(int position) {
+            return tabTitles[position];
+        }
+
+        @Override
         public Fragment getItem(int position) {
+
+
+            Bundle extras = getIntent().getExtras();
+
+            if (extras != null) {
+                pokemonName = extras.getString("POKEMON_NAME");
+                arg1 = new Bundle();
+                arg1.putString("POKEMON_NAME", pokemonName);
+            }
 
             Fragment fragment = null;
 
             switch (position) {
                 case 0:
                     fragment = new MainDataFragment();
+                    fragment.setArguments(arg1);
                     break;
                 case 1:
                     fragment = new MovesetFragment();
+                    fragment.setArguments(arg1);
                     break;
                 case 2:
                     fragment = new TotalPowerFragment();
+                    fragment.setArguments(arg1);
                     break;
                 case 3:
                     fragment = new TotalPowerPFragment();
+                    fragment.setArguments(arg1);
                     break;
             }
+
             return fragment;
         }
+
 
         @Override
         public int getCount() {
