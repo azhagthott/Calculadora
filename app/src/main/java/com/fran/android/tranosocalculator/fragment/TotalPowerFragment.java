@@ -39,10 +39,12 @@ public class TotalPowerFragment extends Fragment {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_total_power, container, false);
 
+        //FIXME: agregar scrollView en el layout, no se están viendo todos los text
 
         Bundle bundle = this.getArguments();
         pokemonName = bundle.getString("POKEMON_NAME");
 
+        //FIXME: estandarizar nombres
         total_power_quick1_special_move_1 = (TextView) rootView.findViewById(R.id.total_power_quick1_special_move_1);
         total_power_quick1_special_move_2 = (TextView) rootView.findViewById(R.id.total_power_quick1_special_move_2);
         total_power_quick1_special_move_3 = (TextView) rootView.findViewById(R.id.total_power_quick1_special_move_3);
@@ -53,12 +55,18 @@ public class TotalPowerFragment extends Fragment {
         total_power_quick2_special_move_3 = (TextView) rootView.findViewById(R.id.total_power_quick2_special_move_3);
         total_power_quick2_special_move_4 = (TextView) rootView.findViewById(R.id.total_power_quick2_special_move_4);
 
+        //FIXME: obtener los datos desde la db local
         dataFromFirebase(pokemonName);
 
         return rootView;
     }
 
+
+    //FIXME: sacar de aqui, crear clase
     private void dataFromFirebase(final String name) {
+
+
+
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference reference = database.getReference("jsonData");
@@ -72,6 +80,7 @@ public class TotalPowerFragment extends Fragment {
 
                     if (searchName.equals(name)) {
 
+                        //FIXME: estandarizar nombres
                         String total_power_quick1_special_move_1_str = dataSnapshot.child("" + i + "").child("total_power_quick1_special_move_1").getValue().toString();
                         String total_power_quick1_special_move_2_str = dataSnapshot.child("" + i + "").child("total_power_quick1_special_move_2").getValue().toString();
                         String total_power_quick1_special_move_3_str = dataSnapshot.child("" + i + "").child("total_power_quick1_special_move_3").getValue().toString();

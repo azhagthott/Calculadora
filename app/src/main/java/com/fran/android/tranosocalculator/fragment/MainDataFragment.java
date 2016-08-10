@@ -52,11 +52,14 @@ public class MainDataFragment extends Fragment {
         tvSpecialMove3 = (TextView) rootView.findViewById(R.id.tvSpecialMove3);
         tvSpecialMove4 = (TextView) rootView.findViewById(R.id.tvSpecialMove4);
 
+        //FIXME: obtener los datos desde la db local
         dataFromFirebase(pokemonName);
+
 
         return rootView;
     }
 
+    //FIXME: sacar de aqui, crear clase
     private void dataFromFirebase(final String name) {
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();
@@ -81,6 +84,9 @@ public class MainDataFragment extends Fragment {
                         String special_move_2 = dataSnapshot.child("" + i + "").child("special_move_2").getValue().toString();
                         String special_move_3 = dataSnapshot.child("" + i + "").child("special_move_3").getValue().toString();
                         String special_move_4 = dataSnapshot.child("" + i + "").child("special_move_4").getValue().toString();
+
+
+                        //FIXME: entragar todo en un arreglo y guardarlo en un db local
 
                         tvId.setText(id);
                         tvName.setText(name);

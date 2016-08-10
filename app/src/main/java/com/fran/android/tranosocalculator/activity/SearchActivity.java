@@ -9,9 +9,8 @@ import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 
 import com.fran.android.tranosocalculator.R;
-import com.fran.android.tranosocalculator.main.Base;
 
-public class SearchActivity extends Base {
+public class SearchActivity extends BaseActivity {
 
     private String pokemon;
 
@@ -26,6 +25,8 @@ public class SearchActivity extends Base {
         final String[] pokemonNames = getResources().getStringArray(R.array.pokemon_array);
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, pokemonNames);
         pokemonName.setAdapter(adapter);
+
+        //FIXME: no mostrar resultados si se ingresa algo que no sea un nombre de pokemon
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {

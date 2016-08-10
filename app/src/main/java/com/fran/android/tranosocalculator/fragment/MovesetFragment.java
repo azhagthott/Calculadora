@@ -20,6 +20,7 @@ public class MovesetFragment extends Fragment {
 
     private String pokemonName;
 
+    //FIXME: estandarizar nombres
     private TextView moveset_quick1_special_move_1;
     private TextView moveset_quick1_special_move_2;
     private TextView moveset_quick1_special_move_3;
@@ -46,6 +47,7 @@ public class MovesetFragment extends Fragment {
         Bundle bundle = this.getArguments();
         pokemonName = bundle.getString("POKEMON_NAME");
 
+        //FIXME: estandarizar nombres
         moveset_quick1_special_move_1 = (TextView) rootView.findViewById(R.id.moveset_quick1_special_move_1);
         moveset_quick1_special_move_2 = (TextView) rootView.findViewById(R.id.moveset_quick1_special_move_2);
         moveset_quick1_special_move_3 = (TextView) rootView.findViewById(R.id.moveset_quick1_special_move_3);
@@ -56,11 +58,13 @@ public class MovesetFragment extends Fragment {
         moveset_quick2_special_move_3 = (TextView) rootView.findViewById(R.id.moveset_quick2_special_move_3);
         moveset_quick2_special_move_4 = (TextView) rootView.findViewById(R.id.moveset_quick2_special_move_4);
 
+        //FIXME: obtener los datos desde la db local
         dataFromFirebase(pokemonName);
 
         return rootView;
     }
 
+    //FIXME: sacar de aqui, crear clase
     private void dataFromFirebase(final String name) {
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();
@@ -75,6 +79,9 @@ public class MovesetFragment extends Fragment {
 
                     if (searchName.equals(name)) {
 
+                        //FIXME: entragar todo en un arreglo y guardarlo en un db local
+
+                        //FIXME: estandarizar nombres
                         String moveset_quick1_special_move_1_str = dataSnapshot.child("" + i + "").child("moveset_quick1_special_move_1").getValue().toString();
                         String moveset_quick1_special_move_2_str = dataSnapshot.child("" + i + "").child("moveset_quick1_special_move_2").getValue().toString();
                         String moveset_quick1_special_move_3_str = dataSnapshot.child("" + i + "").child("moveset_quick1_special_move_3").getValue().toString();

@@ -2,6 +2,7 @@ package com.fran.android.tranosocalculator.data;
 
 import android.util.Log;
 
+import com.fran.android.tranosocalculator.activity.BaseActivity;
 import com.fran.android.tranosocalculator.main.Pokemon;
 import com.google.firebase.crash.FirebaseCrash;
 import com.google.firebase.database.DataSnapshot;
@@ -10,17 +11,15 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-import static com.fran.android.tranosocalculator.main.Base.LOG_TAG;
-
 /**
  * Created by fran on 08-08-16.
  */
 
-public class GetFirebaseData {
+public class FirebaseData extends BaseActivity {
 
     private Pokemon pokemon;
 
-    public GetFirebaseData() {
+    public FirebaseData() {
     }
 
     public Pokemon getPokemonData(final String pokemonName) {

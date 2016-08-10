@@ -19,14 +19,12 @@ import com.fran.android.tranosocalculator.fragment.MovesetFragment;
 import com.fran.android.tranosocalculator.fragment.TotalPowerFragment;
 import com.fran.android.tranosocalculator.fragment.TotalPowerPFragment;
 
-public class MainActivity extends AppCompatActivity {
-
-    private ViewPager mPager;
-    private PagerAdapter mPagerAdapter;
-
-    private String pokemonName;
+public class MainActivity extends BaseActivity {
 
     private static final int NUM_PAGES = 4;
+    private ViewPager mPager;
+    private PagerAdapter mPagerAdapter;
+    private String pokemonName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -1,4 +1,4 @@
-package com.fran.android.tranosocalculator.main;
+package com.fran.android.tranosocalculator.activity;
 
 import android.os.Bundle;
 import android.os.PersistableBundle;
@@ -7,10 +7,10 @@ import android.support.v7.app.AppCompatActivity;
 import com.google.firebase.analytics.FirebaseAnalytics;
 
 /**
- * Created by fran on 08-08-16.
+ * Created by fran on 10-08-16.
  */
 
-public class Base extends AppCompatActivity {
+public class BaseActivity extends AppCompatActivity {
 
     public static final String LOG_TAG = "LOG::: ";
     FirebaseAnalytics mFirebaseAnalytics;
